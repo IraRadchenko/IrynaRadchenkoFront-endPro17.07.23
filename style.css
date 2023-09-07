@@ -1,0 +1,18 @@
+/*1*/
+#text-field {
+    font-size: 20px;
+    height: 40px;
+}
+
+#box {
+    display: none;
+    border: 1px solid purple;
+    font-weight: bold;
+    font-size: 25px;
+    width: 200px;
+    background-color: deepskyblue;
+}
+/*4*/
+#randomImage {
+    max-width: 150px;
+}
