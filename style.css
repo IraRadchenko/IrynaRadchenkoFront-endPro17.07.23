@@ -1,0 +1,21 @@
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 30px;
+    padding: 30px;
+}
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.categories, .goods, .goods-card {
+    width: 25%;
+}
+#goods-card {
+    display: none;
+    border: 1px solid black;
+    background-color: lightblue;
+    text-align: center;
+    padding: 10px;
+}
