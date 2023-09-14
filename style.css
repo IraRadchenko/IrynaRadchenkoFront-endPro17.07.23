@@ -1,0 +1,18 @@
+input, select, textarea {
+    border-radius: 5px;
+}
+
+tr, td {
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+#regTable {
+    width: max-content;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow:  0 0 7px 3px darkgrey;
+    background-color: lightgray;
+    display: none;
+}

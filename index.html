@@ -5,11 +5,37 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>HW20</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<form id="form" name="mainForm">
+    <p><input type="text" name="firstName" placeholder="Your name"></p>
+    <p><input type="text" name="lastName" placeholder="Your lastName"></p>
+    <p><input type="date" name="dateOfBirth" placeholder="date of Birth"></p>
 
+    <p><input type="radio" name="gender" value="M">Male</p>
+    <p><input type="radio" name="gender" value="F">Female</p>
+
+    <p><select name="city">
+        <option value="0">select city</option>
+        <option value="ck">Cherkasy</option>
+        <option value="dn">Dnipro</option>
+        <option value="lv">Lviv</option>
+    </select></p>
+
+    <textarea name="address" placeholder="Address"></textarea>
+
+    <p><input type="checkbox" name='languages' value="en">English</p>
+    <p><input type="checkbox" name='languages' value="ua">Ukraine</p>
+
+    <button type="button" id="btn">SAVE</button>
+</form>
+<div id="regTable">
+    <table id="table">
+
+    </table>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
