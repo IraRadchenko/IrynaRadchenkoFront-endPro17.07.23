@@ -75,6 +75,7 @@ document.getElementById('btn').addEventListener('click', () => {
     const lastName = formElements.lastName.value;
     const cityKey = formElements.city.value;
     const city = cities[cityKey];
+    const depot = formElements.depot.value;
     const payment = formElements.payment.value;
     const number = formElements.number.value;
     const comment = formElements.comment.value;
@@ -82,6 +83,7 @@ document.getElementById('btn').addEventListener('click', () => {
     if (firstName === ''||
             lastName === '' ||
             city === '' ||
+            depot === '' ||
             number === '' ||
             payment !== 'Пасляплата' && payment !== 'Оплата картою'
         ) {
@@ -90,15 +92,16 @@ document.getElementById('btn').addEventListener('click', () => {
         else {
             form.style.display = 'none';
             order.style.display = 'block';
-            displayTable(firstName, lastName, payment, city, number, comment);
+            displayTable(firstName, lastName, payment, city, depot, number, comment);
     }
 })
 
-function displayTable(firstName, lastName, payment, city, number, comment) {
+function displayTable(firstName, lastName, payment, city, depot, number, comment) {
     table.innerHTML = '';
     table.innerHTML += `<tr><td>Ім'я</td><td>${firstName}</td>`;
     table.innerHTML += `<tr><td>Прізвище</td><td>${lastName}</td>`;
     table.innerHTML += `<tr><td>Місто</td><td>${city}</td>`;
+    table.innerHTML += `<tr><td>Відділення Нової пошти</td><td>${depot}</td>`;
     table.innerHTML += `<tr><td>Кількість товару</td><td>${number}</td>`;
     table.innerHTML += `<tr><td>Спосіб оплати</td><td>${payment}</td>`;
     table.innerHTML += `<tr><td>Коментар до замовлення </td><td>${comment}</td>`;
@@ -108,6 +111,7 @@ function displayTable(firstName, lastName, payment, city, number, comment) {
 //     if (firstName === ''||
 //         lastName === '' ||
 //         city === '' ||
+//         depot === '' ||
 //         number === '' ||
 //         payment !== 'Пасляплата' && payment !== 'Оплата картою'
 //     ) {
