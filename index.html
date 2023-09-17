@@ -5,11 +5,67 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>HW21</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="main">
+    <div id="manu">
+        <div id="categories">
+        </div>
+        <div id="goods">
+        </div>
+        <div id="goods-card">
+        </div>
+    </div>
+    <div id="message"></div>
+</div>
 
-<script src="script.js"></script>
+<div id="form">
+    <form action="" method="post" name="form" id="mainForm">
+<h4>Оформлення замовлення</h4>
+        <p><label for="firstName">ПІБ покупця</label></p>
+        <p><input id='firstName' type="text" name="firstName" placeholder="Ім'я"  autofocus></p>
+        <p><label for="lastName">ПІБ покупця</label></p>
+        <p><input id='lastName' type="text" name="lastName" placeholder="Прізвище" ></p>
+
+        <p><label for="city">Виберіть місто</label></p>
+        <p>
+            <select name="city" id="city" >
+                <option value="0">-ваше місто-</option>
+                <option value="ck">-Черкаси-</option>
+                <option value="dn">-Дніпро-</option>
+                <option value="lv">-Львів-</option>
+            </select>
+        </p>
+
+        <p><label for="depot">Склад Нової пошти</label></p>
+        <p><input id='depot' type="text" name="depot" placeholder="номер складу" ></p>
+
+        <p>
+            <input id='postpaid' type="radio" name="payment">
+            <label for="postpaid">Післяплата</label>
+        </p>
+        <p>
+            <input id='payment by card' type="radio" name="payment">
+            <label for="payment by card">Оплата карткою</label>
+        </p>
+
+        <p><input type="number" name="number" placeholder="введіть кількість товару" ></p>
+
+        <p>
+            <textarea name="comment" placeholder="Коментар до замовлення"></textarea>
+        </p>
+        <button type="submit" id="btn">Оформити</button>
+    </form>
+</div>
+<div id="order">
+    <table id="table">
+
+    </table>
+</div>
+<div id="error">Будь ласка, заповніть обов`язкові поля форми!</div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

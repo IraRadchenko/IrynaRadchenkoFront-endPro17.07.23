@@ -1,0 +1,54 @@
+#manu {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 30px;
+    padding: 30px;
+}
+
+#categories, #goods, #goods-card {
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#goods-card {
+    text-align: center;
+}
+
+#form {
+    margin: 0 auto;
+    max-width: max-content;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+
+h4 {
+    text-align: center;
+}
+input, select, textarea {
+    border-radius: 5px;
+}
+
+tr, td {
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+#order {
+    width: max-content;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow:  0 0 7px 3px darkgrey;
+    background-color: lightgray;
+    display: none;
+
+}
+#error {
+    display: none;
+    text-align: center;
+}
