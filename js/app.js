@@ -41,6 +41,7 @@ categoriesList.addEventListener('click', event => {
     const categoryKey = event.target.getAttribute('data-category');
     const categoryProducts = categories[categoryKey].products;
     displayProducts(categoryProducts, categoryKey);
+      goodsInfo.innerHTML = '';
   }
 });
 
@@ -65,9 +66,9 @@ const order = document.getElementById('order');
 
 
 const cities = {
-    ck: 'Cherkasy',
-    dn: 'Dnipro',
-    lv: 'Lviv'
+    ck: 'Черкаси',
+    dn: 'Дніпро',
+    lv: 'Львів'
 };
 
 document.getElementById('btn').addEventListener('click', () => {
@@ -80,19 +81,11 @@ document.getElementById('btn').addEventListener('click', () => {
     const number = formElements.number.value;
     const comment = formElements.comment.value;
 
-    if (firstName === ''||
-            lastName === '' ||
-            city === '' ||
-            depot === '' ||
-            number === '' ||
-            payment !== 'Пасляплата' && payment !== 'Оплата картою'
-        ) {
-            document.getElementById('error').style.display = 'block';
-        }
-        else {
-            form.style.display = 'none';
-            order.style.display = 'block';
-            displayTable(firstName, lastName, payment, city, depot, number, comment);
+    const isValid = validateForm(firstName, lastName, city, depot, number, payment);
+    if (isValid) {
+        form.style.display = 'none';
+        order.style.display = 'block';
+        displayTable(firstName, lastName, payment, city, depot, number, comment);
     }
 })
 
@@ -107,17 +100,26 @@ function displayTable(firstName, lastName, payment, city, depot, number, comment
     table.innerHTML += `<tr><td>Коментар до замовлення </td><td>${comment}</td>`;
 }
 
-// function validateForm() {
-//     if (firstName === ''||
-//         lastName === '' ||
-//         city === '' ||
-//         depot === '' ||
-//         number === '' ||
-//         payment !== 'Пасляплата' && payment !== 'Оплата картою'
-//     ) {
-//         //form.style.display = 'none';
-//         document.getElementById('error').style.display = 'block';
-//         return false;
-//     }
-//     return true;
-// }
+function validateForm(firstName, lastName, city, depot, number, payment) {
+    if (firstName === ''||
+        lastName === '' ||
+        city === '' ||
+        depot === '' ||
+        number === '' ||
+        payment !== 'postpaid' && payment !== 'payment by card'
+    ) {
+        const parent = document.getElementById('error');
+        const errorMessage = document.createElement('p');
+        const btnMessage = document.createElement('button');
+        parent.innerHTML = '';
+        errorMessage.textContent = 'Будь ласка, заповніть обов`язкові поля форми!';
+        btnMessage.textContent = 'X';
+        parent.appendChild(errorMessage);
+        errorMessage.appendChild(btnMessage);
+        btnMessage.addEventListener('click', () => {
+            errorMessage.remove();
+        })
+        return false;
+    }
+    return true;
+}
