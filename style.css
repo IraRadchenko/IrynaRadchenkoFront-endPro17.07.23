@@ -1,0 +1,78 @@
+#btnAdd {
+    margin-bottom: 15px;
+}
+
+#users {
+    padding: 10px;
+    border: 1px solid black;
+    width: 500px;
+}
+#users > div {
+    display: flex;
+    gap: 10px;
+    margin: 5px;
+}
+#userNameRow {
+    width: 150px;
+
+}
+
+#userIdRow {
+    min-width: 130px;
+    margin-right: auto;
+    margin-left: 0;
+}
+.actions {
+    margin-right: 0;
+    margin-left: auto;
+}
+.actions > input {
+    margin-right: 5px;
+}
+
+.editBtn {
+    color: red;
+}
+
+#form form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+
+}
+
+#main {
+    display: flex;
+    gap: 15px;
+
+}
+#userInfo {
+    display: flex;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#userInfo button {
+    height: 25px;
+    margin-left: 5px;
+}
+#userInfo div > div {
+    border: 1px solid black;
+    padding: 5px;
+
+}
+
+#error {
+    text-align: center;
+    margin: auto;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+#error p{
+    color: red;
+    background-color: lightgray;
+    padding: 15px;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+}
