@@ -47,7 +47,7 @@ function showUserRow(user) {
         '',
         { type: 'button', value: 'Delete', 'data-type': 'delete' },
         {
-            click: handleDeleteUser,
+            click: confirmDeleteMessage,
         }
     ); // deleteBtnElement
 }
@@ -183,14 +183,14 @@ function handleDeleteUser(event) {
 
 function deleteUserById(id) {
     const indexToRemove = users.findIndex((user) => user.id === id);
-    const confirmMessage = confirm(
-        'Ви впевнені, що хочете видалити користувача?'
-    );
-    if (confirmMessage) {
+    // const confirmMessage = confirm(
+    //     'Ви впевнені, що хочете видалити користувача?'
+    // );
+    // if (confirmMessage) {
         users.splice(indexToRemove, 1);
         removeElement(`div[data-user-id="${id}"]`);
         updateStorage();
-    }
+   // }
 }
 
 function updateStorage() {
@@ -238,4 +238,29 @@ function editData(id) {
     if (user) {
         showAddUserForm(user.login, user.name, user.lastName, user.email, action = () => handleEditUser(id));
     }
+}
+
+function confirmDeleteMessage(event) {
+    const parentSelector = document.querySelector('#main');
+    const parentMain = document.createElement('div');
+    parentMain.textContent = '';
+
+    const deleteMessage = document.createElement('p');
+    deleteMessage.textContent = 'Ви впевнені, що хочете видалити користувача?';
+
+    const btnYes = document.createElement('button');
+    btnYes.textContent = 'ТАК';
+    btnYes.addEventListener('click', () => { handleDeleteUser(event);
+        parentMain.remove()
+    });
+
+    const btnNo = document.createElement('button');
+    btnNo.textContent = 'НІ';
+    btnNo.addEventListener('click', () => {
+        parentMain.remove();
+    })
+    deleteMessage.appendChild(btnYes);
+    deleteMessage.appendChild(btnNo);
+    parentMain.appendChild(deleteMessage);
+    parentSelector.appendChild(parentMain);
 }
