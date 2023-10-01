@@ -1,0 +1,44 @@
+body {
+    padding: 10px;
+    position: relative;
+}
+#block-1 {
+    display: flex;
+    gap: 50px;
+    padding: 50px;
+
+}
+
+#block-1 .btn  {
+    height: 50px;
+}
+
+.modal-body {
+    color: black;
+}
+ #form {
+     display: flex;
+     flex-direction: column;
+ }
+
+ #form input,
+ #form button {
+     margin: 0 auto;
+ }
+
+#form input {
+    margin-bottom: 5px;
+    max-width: 50%;
+}
+ #block-2 .alert {
+     margin: 0 auto;
+     text-align: center;
+     color: red;
+     max-width: 50%;
+ }
+
+ #block-2 {
+     position: absolute;
+     top: 300px;
+     left: 25%;
+ }
