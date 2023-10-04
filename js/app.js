@@ -56,17 +56,29 @@ function showImage(index) {
     image.src = images[index];
 }
 
+let interval;
+function showAutoImage() {
+    interval = setInterval(nextImg, 3000);
+}
+
+showAutoImage();
+
 function nextImg() {
+    clearInterval(interval);
     currentIndex = (currentIndex + 1) % images.length;
     showImage(currentIndex);
+    showAutoImage();
 }
 
 function prevImg() {
+    clearInterval(interval);
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     showImage(currentIndex);
+    showAutoImage();
 }
 
-setInterval(nextImg, 3000);
+
+
 
 
 
