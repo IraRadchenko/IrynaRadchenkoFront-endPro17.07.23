@@ -1,0 +1,65 @@
+body {
+    background-color: #6d7b96;
+    padding: 20px;
+}
+
+#root {
+    background-image: url("img/starwarsBg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+}
+
+#logoImg {
+    width: 25%;
+    margin: 0 auto;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    position: relative;
+}
+
+.block {
+    display: flex;
+
+}
+.block > div {
+    position: absolute;
+    top: 0;
+    left: 27%;
+}
+
+.list-group {
+    width: 25%;
+}
+
+button {
+    width: 25%;
+    max-height: 50px;
+    font-weight: bold;
+}
+
+#detailsContainer {
+    position: absolute;
+    top: 0;
+    left: 54%;
+}
+
+.details {
+    display: flex;
+    align-items: flex-start;
+    width: 500px;
+}
+
+.details h6 {
+    margin: 0 5px ;
+    width: 125px;
+}
+
+.details p {
+    margin: 0;
+}
