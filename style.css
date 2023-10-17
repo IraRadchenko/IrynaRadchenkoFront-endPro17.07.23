@@ -1,0 +1,50 @@
+body {
+    position: relative;
+}
+
+#root {
+    padding: 20px 30px 0;
+    text-align: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    padding: 20px 30px;
+    margin: 0 auto;
+}
+
+#form p {
+
+}
+
+.alert-dark {
+    width: 40%;
+    margin: 0 auto;
+}
+
+#modal {
+    padding: 30px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: max-content;
+    position: absolute;
+    left: 27%;
+    top: 200px;
+    z-index: 1;
+    color: red;
+    font-weight: bold;
+
+}
+
+#modal button {
+    margin: 15px 10px 0;
+    color: red;
+    font-weight: bold;
+    font-size: 35px;
+    border: 0;
+    background-color: inherit;
+   }
+
