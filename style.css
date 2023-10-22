@@ -1,0 +1,34 @@
+.block {
+    font-size: 40px;
+    font-weight: bold;
+    color: #0a53be;
+}
+
+#formHouse,
+.formApartment,
+.formPerson{
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#formHouse input,
+.formApartment input,
+.formPerson input{
+    width: 20%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#formHouse button,
+.formApartment button,
+.formPerson button{
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.formApartment p {
+    margin: 3px 0;
+}
