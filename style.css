@@ -1,0 +1,95 @@
+body {
+    background-color: #d3e0ee;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 3px 5px 6px #6C9;
+    font-family: Arial, sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #366B50;
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
+}
+
+#price-list,
+#info-list {
+    width: 23%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+}
+#price-list h5,
+#price-list p {
+    margin: 10px 0;
+}
+
+form {
+    margin: 0 auto;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 40%;
+    text-align: center;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+form p {
+    font-weight: bold;
+}
+
+button {
+    margin: 30px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 15px 30px;
+    cursor: pointer;
+    text-shadow: 3px 5px 6px #6C9;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #366B50;
+}
+
+button:hover {
+    background-color: darkseagreen;
+}
+
+#info-list button {
+    margin-left: 0;
+}
+
+#sliderContainer {
+    border: 1px solid gray;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#slide {
+    width: 25%;
+}
+
+h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 150px;
+    padding: 30px;
+    background-color: #cff4fc;
+    border: 1px solid gray;
+    border-radius: 10px;
+    text-shadow: 3px 5px 6px #6C9;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #366B50;
+}
