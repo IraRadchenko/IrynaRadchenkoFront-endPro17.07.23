@@ -1,0 +1,24 @@
+.content {
+    width: 71%;
+    /*height: 455px;*/
+    background-color: #03070a;
+    background-image: url("../../../images/bgimg.jpg");
+    border-radius: 10px;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.content-title {
+    margin: 100px 0 0 15px;
+    width: 50%;
+    text-align: center;
+}
+
+.content-title h3 {
+    font-weight: lighter;
+}
+.content-title h2 {
+    font-style: italic;
+}
