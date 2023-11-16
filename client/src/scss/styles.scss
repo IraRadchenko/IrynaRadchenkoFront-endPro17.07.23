@@ -1,0 +1,23 @@
+#wrapper {
+  display: flex;
+  align-content: start;
+}
+
+#menu, #content, #cart {
+  width: 33%;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+  border: 1px solid black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
