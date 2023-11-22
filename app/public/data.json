@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "smile": ":)",
+    "title": "Smile",
+    "description": "I am a smiling emoticon"
+  },
+  {
+    "id": 2,
+    "smile": ":(",
+    "title": "Sad",
+    "description": "I'm a sad emoticon"
+  },
+  {
+    "id": 3,
+    "smile": "O:)",
+    "title": "Angel",
+    "description": "I am a smiley - a little angel"
+  }
+]
