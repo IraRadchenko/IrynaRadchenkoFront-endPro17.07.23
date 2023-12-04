@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+button, .button {
+  border: 1px solid gray;
+  border-radius: 20px;
+  background-color: #eeeeff;
+  padding: 10px 20px;
+
+  margin: 20px 0;
+}
+
+button, .button {
+  background-color: #aaaaaa;
+}
+
