@@ -1,3 +1,8 @@
+import ModalSection from "../Modal/Modal";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './ContactItem.scss';
+
 export default function ContactItem({ item, onDelete} ) {
 
     const handleDelete = () => {
@@ -10,7 +15,7 @@ export default function ContactItem({ item, onDelete} ) {
                 <td>{item.username}</td>
                 <td>{item.phone}</td>
                 <td>
-                    <input type='button' value='X'  onClick={handleDelete}/>
+                    <ModalSection onDelete={handleDelete}/>
                 </td>
             </tr>
         </tbody>

@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import {BrowserRouter, Route, Link, Routes, useNavigate} from 'react-router-dom';
-
-import './App.css';
 import AddForm from "./components/AddForm/AddForm";
 import ContactsList from "./components/ContactsList/ContactsList";
+import './App.css';
 
 function App() {
 
