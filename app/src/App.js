@@ -1,34 +1,29 @@
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import {BrowserRouter, Route, Link, Routes, useNavigate} from 'react-router-dom';
 import AddForm from "./components/AddForm/AddForm";
 import ContactsList from "./components/ContactsList/ContactsList";
+import axios from "axios";
 import './App.css';
+import { setItems } from './store/itemSlice';
+
 
 function App() {
+    const dispatch = useDispatch();
 
-  const [items, setItems] = useState([]);
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(data => setItems(data))
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+                const items = response.data;
+                dispatch(setItems(items));
+            } catch (error) {
+                console.error('Error loading contacts:', error);
+            }
+        };
 
-        .catch(error => console.error('Error loading contacts:', error));
-  }, [])
-
-  const handleDelete = (itemKey) => {
-    const newItems = items.filter(item => item.id !== itemKey)
-    setItems(newItems);
-  };
-
-  const handleTaskAdd = (newItem ) => {
-    setItems([
-      ...items,
-      newItem,
-    ]);
-  }
-  const handleCancel = () => {
-
-  };
+        fetchData();
+    }, [dispatch]);
 
   return (
           <div>
@@ -36,11 +31,11 @@ function App() {
                    <Routes>
                         <Route
                           path="/"
-                          element={<ContactsList items={items} onDelete={handleDelete} />}
+                          element={<ContactsList/>}
                         />
                         <Route
                            path="/form"
-                           element={<AddForm onAdd={handleTaskAdd} onCancel={handleCancel} />}
+                           element={<AddForm/>}
                          />
                          </Routes>
               </BrowserRouter>

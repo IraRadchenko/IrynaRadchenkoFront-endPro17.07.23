@@ -1,5 +1,7 @@
 import { useFormik } from "formik";
 import { Fragment } from "react";
+import { useDispatch } from 'react-redux';
+import {addContact} from "../../store/itemSlice";
 import { string, number, object } from 'yup';
 import { Link, useNavigate  } from 'react-router-dom'
 
@@ -56,14 +58,16 @@ function getValidationSchema() {
 }
 
 export default function AddForm({ onAdd, onCancel}) {
+    const dispatch = useDispatch();
     const navigate = useNavigate();
+
     const formik = useFormik({
         initialValues: getInitialValues(),
         validationSchema: getValidationSchema(),
-        onSubmit: values => {
-            onAdd(values);
-            navigate('/')
-        }
+        onSubmit: (values) => {
+            dispatch(addContact(values));
+            navigate('/');
+        },
     });
 
     const generateFormElements = () => {
