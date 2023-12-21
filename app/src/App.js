@@ -5,7 +5,7 @@ import AddForm from "./components/AddForm/AddForm";
 import ContactsList from "./components/ContactsList/ContactsList";
 import axios from "axios";
 import './App.css';
-import { setItems } from './store/itemSlice';
+import { setItem } from './store/itemSlice';
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
             try {
                 const response = await axios.get('https://jsonplaceholder.typicode.com/users');
                 const items = response.data;
-                dispatch(setItems(items));
+                dispatch(setItem(items));
             } catch (error) {
                 console.error('Error loading contacts:', error);
             }

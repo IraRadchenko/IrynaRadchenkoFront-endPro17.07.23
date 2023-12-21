@@ -1,13 +1,13 @@
 import ModalSection from "../Modal/Modal";
 import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../store/itemSlice';
+import { deleteItem } from '../../store/itemSlice';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ContactItem.scss';
 
 export default function ContactItem({item} ) {
     const dispatch = useDispatch();
     const handleDelete = () => {
-        dispatch(deleteContact(item.id));
+        dispatch(deleteItem(item.id));
     };
 
     return (

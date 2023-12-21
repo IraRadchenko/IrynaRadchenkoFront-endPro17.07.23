@@ -1,16 +1,11 @@
 import ContactItem from "../ContactItem/ContactItem";
-import { useDispatch, useSelector } from 'react-redux';
-import {deleteContact} from "../../store/itemSlice";
+import { useSelector } from 'react-redux';
 import './ContactList.scss'
 import {Link} from "react-router-dom";
 
 export default function ContactsList() {
-    const dispatch = useDispatch();
 
     const items = useSelector((state) => state.items.items);
-    const handleDelete = (itemId) => {
-        dispatch(deleteContact(itemId));
-    };
 
     return (
         <div>
@@ -27,7 +22,7 @@ export default function ContactsList() {
                    <th>ACTION</th>
                </tr>
                </thead>
-                {items.map(item => (<ContactItem key={item.id} item={item} onDelete={handleDelete}/>))}
+                {items.map(item => (<ContactItem key={item.id} item={item} />))}
            </table>
         </div>
     )
